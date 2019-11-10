@@ -1,0 +1,77 @@
+.form
+	min-width 320px
+	display flex
+	width 665px
+	background #FFFFFF
+	background-image url('/shape.png')
+	background-size: 46% 74%
+	background-repeat: no-repeat;
+	background-position: 100% 100%
+	@media screen and (max-width 480px)
+		flex-direction: column
+		background-size 54% 46%
+	@media screen and (max-width 320px)
+		flex-direction: column
+		background-size 77% 40%
+	&__block
+		position relative
+		width 100%
+
+		&--title
+			width 174.2px
+			background #5A61ED
+			@media screen and (max-width 480px)
+				width 100%
+				padding 20px
+		&--data
+			padding 40.5px 21.6px
+			padding-bottom 30px
+
+	&__title
+		&--form
+			position absolute
+			right -33%
+			bottom 71px
+			width 162px
+			font-family PT Sans
+			font-size 49px
+			font-weight normal
+			font-style normal
+			line-height 63px
+			letter-spacing .5px
+			word-wrap normal
+			color #FFFFFF
+			transform rotate(-90deg)
+			@media screen and (max-width 480px)
+				transform rotate(0deg)
+				width 100%
+				right 0
+				position static
+				transform rotate(0deg)
+			@media screen and (max-width 320px)
+				width 100%
+				right 0
+				position static
+				transform rotate(0deg)
+				text-align right
+		&--data
+			font-size 22px
+			font-weight 500
+			line-height 26px
+			letter-spacing -0.46px
+			color #111111
+
+
+	&__data-wrapper
+		display flex
+		@media screen and (max-width 320px)
+			flex-direction column
+
+	&__data-container
+		display flex
+		flex-direction column
+
+	&__description
+		font-size 14px
+		font-weight 300
+		line-height 16px

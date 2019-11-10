@@ -7,5 +7,132 @@ doctype html
 html(lang='ru')
 	include ../head/head
 	+page
+		h1.page-title.visually-hidden test-page-registration
+		section.registration-popup.overlay
+			h2.registration-popup__title.visually-hidden form-registration
+			form.registration-popup__form.form(action="post")
+				div.form__block.form__block--title
+					h3.form__title.form__title--form Sign up
+				div.form__block.form__block--data
+					h3.form__title.form__title--data New user?
+					p.form__description Use the form below to create your account.
+					div.form__data-wrapper.data
+						div.data__container
+							label.data__label First Name
+								input.data__input.data__input--text(type="text", name="name" required)
+							label.data__label(for="") Nationality
+									div.data__wrapper-select.select
+										select.data__input.data__input--select(name="Nationality")
+											option(value="American" selected='selected') American
+											option(value="Russian" selected='selected') Russian
+											option(value="Chinese" selected='selected') Chinese
+							div.data__wrapper.data-piker
+								label.data__label(for="") Date of Birth
+									div.data-piker__block
+										div.select.select--day
+											select.data-piker__select(name="day")
+												option(value="1" selected='selected') day
+												option(value='1') 1
+												option(value='2') 2
+												option(value='3') 3
+												option(value='4') 4
+												option(value='5') 5
+												option(value='6') 6
+												option(value='7') 7
+												option(value='8') 8
+												option(value='9') 9
+												option(value='10') 10
+												option(value='11') 11
+												option(value='12') 12
+												option(value='13') 13
+												option(value='14') 14
+												option(value='15') 15
+												option(value='16') 16
+												option(value='17') 17
+												option(value='18') 18
+												option(value='19') 19
+												option(value='20') 20
+												option(value='21') 21
+												option(value='22') 22
+												option(value='23') 23
+												option(value='24') 24
+												option(value='25') 25
+												option(value='26') 26
+												option(value='27') 27
+												option(value='28') 28
+												option(value='29') 29
+												option(value='30') 30
+												option(value='31') 31
+										div.select.select--mounth
+											select.data-piker__select(name="mouth")
+												option(value="1" selected='selected') mouth
+												option(value="January") January
+												option(value="February") February
+												option(value="March") March
+												option(value="April") April
+												option(value="May") May
+												option(value="June") June
+												option(value="July") July
+												option(value="August") August
+												option(value="September") September
+												option(value="October") October
+												option(value="November") November
+												option(value="December") December
+										div.select.select--yaers
+											select.data-piker__select(name="years")
+												option(value="default" selected='selected') years
+												option(value='2014') 2014
+												option(value='2013') 2013
+												option(value='2012') 2012
+												option(value='2011') 2011
+												option(value='2010') 2010
+												option(value='2009') 2009
+												option(value='2008') 2008
+												option(value='2007') 2007
+												option(value='2006') 2006
+												option(value='2005') 2005
+												option(value='2004') 2004
+												option(value='2003') 2003
+												option(value='2002') 2002
+												option(value='2001') 2001
+												option(value='2000') 2000
+												option(value='1999') 1999
+												option(value='1998') 1998
+												option(value='1997') 1997
+												option(value='1996') 1996
+												option(value='1995') 1995
+												option(value='1994') 1994
+												option(value='1993') 1993
+												option(value='1992') 1992
+												option(value='1991') 1991
+												option(value='1990') 1990
+												option(value='1989') 1989
+												option(value='1988') 1988
+												option(value='1987') 1987
+												option(value='1986') 1986
+												option(value='1985') 1985
+												option(value='1984') 1984
+												option(value='1983') 1983
+												option(value='1982') 1982
+												option(value='1981') 1981
+							label.data__label(for="") Password
+								input.data__input.data__input--text.password(type="password", name="password" required)
+						div.data__container
+							label.data__label Last Name
+								input.data__input.data__input--text(type="text", name="name")
+							label.data__label.data__label--email(for="") E-mail
+								input.data__input.data__input--text.data__input--email(type="email", name="email" required)
+							div.data__wrapper.gender-select
+								h4.gender-select__title Gender
+								input.gender-select__input.gender-select__input--radio.visually-hidden(type="radio", name="Gender" id="male")
+								label.gender-select__label(for='male' tabindex="1") Male
+								input.gender-select__input.gender-select__input--radio.visually-hidden(type="radio", name="Gender" id="female" checked)
+								label.gender-select__label(for='female' tabindex="1") Female
+							label.data__label(for="") Confirm Password
+								input.data__input.data__input--text.confirm-password(type="password", name="confirm-password")
+					div.form__data-wrapper.submit-registration
+						p.submit-registration__ask Have an account?
+							a.submit-registration__link-regisration(href='#')  Login
+						button.submit-registration__button(type="submit") Complete Signup
 		block content
 		+scripts(['app.min.js'])

@@ -8,7 +8,7 @@ const {PORT, OPEN, NODE_ENV, TUNNEL} = process.env;
 gulp.task('server', () => (
 	bs.init({
 		files: ['dist/**/*'],
-		open: !!OPEN,
+		open: true,
 		reloadOnRestart: true,
 		port: PORT || 3000,
 		snippetOptions: {

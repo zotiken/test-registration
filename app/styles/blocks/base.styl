@@ -1,0 +1,51 @@
+select
+	appearance none
+input:focus
+	// outline 1px solid #cccccc
+	border-bottom: 2px solid #5A61ED
+
+.checked
+	&::after
+		position absolute
+		content: " "
+		width 11px
+		height 8px
+		background-image: url('/ShapeOK.png')
+		bottom 6px
+		right -4px
+		transform: translate(-50%, -50%)
+
+.select
+	position relative
+	width 100%
+	&--day
+		margin-right 10px
+		width 24%
+
+	&--mounth
+		width 37.34%
+		margin-right 10px
+	&--yaers
+		width 29.91%
+
+	&::after
+		position absolute
+		content: " "
+		width 8px
+		height 4px
+		background-image: url('/expand.png')
+		top 50%
+		right -4px
+		transform: translate(-50%, -50%)
+
+.visually-hidden
+	position absolute !important
+	padding 0 !important
+	overflow hidden
+	clip rect(1px 1px 1px 1px) /* IE6, IE7 */
+	clip rect(1px, 1px, 1px, 1px)
+	width 1px !important
+	height 1px !important
+	border 0 !important
+
+

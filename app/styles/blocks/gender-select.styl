@@ -1,0 +1,44 @@
+.gender-select
+	display flex
+	flex-wrap wrap
+
+	&__title
+		padding-top 16.3px
+		width 100%
+		font-size 12px
+		font-weight 300
+		line-height 14px
+		color #7C7C7C
+
+	&__label
+		padding-left 16.3px
+		margin-right 20px
+		height 27.2px
+		display flex
+		align-items center
+		justify-content center
+		position relative
+		&::after
+			position: absolute;
+			content: " ";
+			width: 13px;
+			height: 13px;
+			background-image: url(/Rectangle2.svg);
+			top: 50%;
+			left: 14%;
+			transform: translate(-50%, -50%);
+
+	&__input
+		background-color: transparent
+		&:checked + .gender-select__label
+			&::before
+				position absolute
+				content: " "
+				width 13px
+				height 13px
+				background-image: url('/Rectangle1.svg')
+				background-repeat no-repeat
+				background-position 50% 50%
+				top 50%
+				left 14%
+				transform: translate(-50%, -50%)
